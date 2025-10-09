@@ -19,3 +19,5 @@ https://huggingface.co/spaces/patriotyk/styletts2-ukrainian
 https://github.com/vkopey/VoiceLLM/blob/main/styletts2-ukrainian_install.txt
 
 Каркас для локального запуску великих мовних моделей (LLM) Ollama: https://ollama.com/
+
+Відео-інструкція: https://youtu.be/1wjZljPFbr0
