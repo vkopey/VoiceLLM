@@ -1,0 +1,26 @@
+Завантажити і розпакувати https://www.python.org/ftp/python/3.10.11/python-3.10.11-embed-amd64.zip
+Завантажити get-pip.py: https://bootstrap.pypa.io/get-pip.py
+Запустити cmd.exe з правами адміністратора та запустити з розпаковоної папки:
+python get-pip.py
+Додати у файл python310._pth рядки:
+Lib
+Lib\site-packages
+або розкоментувати рядок #import site
+
+Запустити powershell з правами адміністратора та ввести 2 команди:
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+choco install ffmpeg
+
+Установити openai-whisper:
+python -m pip install -U openai-whisper
+whisper example.mp3 --model turbo
+whisper example.mp3 --model turbo --language uk
+
+Створити програму test.py з таким вмістом:
+import whisper
+model = whisper.load_model("turbo")
+result = model.transcribe("example.mp3", language='uk')
+print(result["text"])
+
+Виконати:
+..\python test.py
